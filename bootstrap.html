@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br><br>
+
+
+<form class="row g-3 needs-validation" novalidate>
+  <div class="col-md-4">
+    <label for="validationCustom01" class="form-label">First name</label>
+    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustom02" class="form-label">Last name</label>
+    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label">Username</label>
+    <div class="input-group has-validation">
+      <span class="input-group-text" id="inputGroupPrepend">@</span>
+      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+      <div class="invalid-feedback">
+        Please choose a username.
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationCustom03" class="form-label">City</label>
+    <input type="text" class="form-control" id="validationCustom03" required>
+    <div class="invalid-feedback">
+      Please provide a valid city.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom04" class="form-label">State</label>
+    <select class="form-select" id="validationCustom04" required>
+      <option selected disabled value="">Choose...</option>
+      <option>male</option>
+      <option value="choose"> female</option>
+      <option value="choose"> others </option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid state.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom05" class="form-label">Zip</label>
+    <input type="text" class="form-control" id="validationCustom05" required>
+    <div class="invalid-feedback">
+      Please provide a valid zip.
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form>
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Accordion Item #1
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item’s accordion body.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Accordion Item #2
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item’s accordion body. Let’s imagine this being filled with some actual content.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Accordion Item #3
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+    </div>
+  </div>
+</div>
+<br><br><br>
+
+<div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush" style="background-color: brown; color: ;">
+    <li class="list-group-item" style="background-color: brown; color: azure;">An item </li>
+    <li class="list-group-item" style="background-color: rgb(0, 0, 0); color: azure;">A second item</li>
+    <li class="list-group-item" style="background-color: rgb(166, 0, 255); color: azure;">A third item</li>
+  </ul>
+</div>
+
+<br><br><br><br>
+
+<div class="alert alert-primary" role="alert">
+  A simple primary alert—check it out!
+</div>
+<div class="alert alert-secondary" role="alert">
+  A simple secondary alert—check it out!
+</div>
+<div class="alert alert-success" role="alert">
+  A simple success alert—check it out!
+</div>
+<div class="alert alert-danger" role="alert">
+  A simple danger alert—check it out!
+</div>
+<div class="alert alert-warning" role="alert">
+  A simple warning alert—check it out!
+</div>
+<div class="alert alert-info" role="alert">
+  A simple info alert—check it out!
+</div>
+<div class="alert alert-light" role="alert">
+  A simple light alert—check it out!
+</div>
+<div class="alert alert-dark" role="alert">
+  A simple dark alert—check it out!
+</div>
+
+<br><br><br>
+
+<div id="carouselExampleIndicators" class="carousel slide" style="background-color: black;">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner" style="display: flex; justify-content: center;">
+    <div class="carousel-item active">
+      <img src="images/girl.png" style="width: 500px;" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/girl.png" style="width: 500px;" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/girl.png" style="width: 500px;" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<br><br>
+
+  <style>
+    .st {
+      height: 100px;
+    }
+
+    td{
+      border: 1px solid gray;
+      width: 100px;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="text-primary">Hello, world!</h1>
+  <h1 class="text-danger">Hello, world!</h1>
+  <h1 class="text-warning">Hello, world!</h1>
+  <h1 class="text-success">Hello, world!</h1>
+  <h1 class="text-dark">Hello, world!</h1>
+  <h1 class="text-white bg-danger">Hello, world!</h1>
+  <h1 class="text-secondary">Hello, world!</h1>
+  <h1 class="text-muted">Hello, world!</h1>
+
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 bg-primary">Primary</div>
+      <div class="col-md-4 bg-success text-white  ">Success</div>
+      <div class="col-md-4 bg-dark text-white">Dark</div>
+      <div class="col-md-4 bg-white">White</div>
+      <div class="col-md-4 bg-secondary">Secondary</div>
+      <div class="col-md-4 bg-warning">Warning</div>
+      <div class="col-md-4 bg-danger">Danger</div>
+      <div class="col-md-4 bg-mute">Muted</div>
+
+    </div>
+  </div>
+
+
+
+
+
+  <div class="container  mt-5">
+
+    <!-- <div class="row">
+      <div class="col-md-1 st bg-warning"></div>
+      <div class="col-md-1 st bg-success"></div>
+      <div class="col-md-1 st bg-danger"></div>
+      <div class="col-md-1 st bg-dark"></div>
+      <div class="col-md-1 st bg-primary"></div>
+      <div class="col-md-1 st bg-warning"></div>
+      <div class="col-md-1 st bg-success"></div>
+      <div class="col-md-1 st bg-warning"></div>
+      <div class="col-md-1 st bg-secondary"></div>
+      <div class="col-md-1 st bg-danger"></div>
+      <div class="col-md-1 st bg-warning"></div>
+      <div class="col-md-1 st bg-primary"></div>
+    </div> -->
+
+
+
+
+    <div class="row">
+      <!-- <div class="col-md-4 st bg-warning">
+        <div class="row">
+         <div class="row">
+      <div class="col-md-1 st bg-warning"></div>
+      <div class="col-md-1 st bg-success"></div>
+      <div class="col-md-1 st bg-danger"></div>
+      <div class="col-md-1 st bg-dark"></div>
+      <div class="col-md-1 st bg-primary"></div>
+      <div class="col-md-1 st bg-warning"></div>
+      <div class="col-md-1 st bg-success"></div>
+      <div class="col-md-1 st bg-warning"></div>
+      <div class="col-md-1 st bg-secondary"></div>
+      <div class="col-md-1 st bg-danger"></div>
+      <div class="col-md-1 st bg-warning"></div>
+      <div class="col-md-1 st bg-primary"></div>
+    </div>
+        </div>
+      </div>
+      <div class="col-md-4 st bg-success"></div>
+      <div class="col-md-4 st bg-danger"></div>
+      <div class="col-md-4 st bg-dark"></div>
+      <div class="col-md-4 st bg-primary"></div>
+      <div class="col-md-4 st bg-warning"></div>
+      <div class="col-md-4 st bg-success"></div>
+      <div class="col-md-4 st bg-warning"></div>
+      <div class="col-md-4 st bg-secondary"></div>
+      <div class="col-md-4 st bg-danger"></div>
+      <div class="col-md-4 st bg-dark"></div>
+      <div class="col-md-4 st bg-primary"></div>
+    </div>
+ -->
+
+
+ <div class="col-md-6 bg-dark"> <h1 class="text-light">col-6</h1></div>
+ <div class="col-md-6 bg-danger"> <h1 class="text-light">col-6</h1></div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <table style="margin-top: 200px;">
+    <tr>
+     <td>SN</td>
+     <td>Name</td>
+     <td>Description</td>
+     <td>Price</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Okra</td>
+      <td>crops</td>
+      <td>N500</td>
+    </tr>
+     <tr>
+      <td>1</td>
+      <td>Okra</td>
+      <td>crops</td>
+      <td>N500</td>
+    </tr>
+     <tr>
+      <td>1</td>
+      <td>Okra</td>
+      <td>crops</td>
+      <td>N500</td>
+    </tr>
+  </table>
+
+
+
+  <br><br>
+  
+  
+
+  <ol>
+    <li>one</li>
+    <li>two</li>
+    <li>  Three</li>
+  </ol>
+
+
+  <ul>
+    <li>Okra</li>
+    <li>Tomato</li>
+    <li>Cabbage</li>
+  </ul>
+  
+  
+  <div class="alert alert-success"> Please fill the form before proceeding</div>
+  
+  <h1>Example heading <span class="badge bg-success text-bg-secondary">New</span></h1>
+<h2>Example heading <span class="badge bg-warning text-bg-secondary">New</span></h2>
+<h3>Example heading <span class="badge bg-danger text-bg-secondary">New</span></h3>
+<h4>Example heading <span class="badge bg-danger text-bg-secondary">New</span></h4>
+<h5>Example heading <span class="badge bg-danger text-bg-secondary">New</span></h5>
+<h6>Example heading <span class="badge bg-danger text-bg-secondary">New</span></h6>
+  <br>
+
+
+  <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+
+
+
+  <div class="col-md 3 st bg-dark text-light mt-5" >dark</div>
+  <div class="col-md 3 st bg-warning text-dark" > Success</div>
+  <div class="col-md 3 st bg-primary text-light"> primary</div>
+
+    <div class="row mt-5 ">
+      <div class="col-md 3 st bg-warning text-dark " > Success</div>
+      <div class="col md 3 st bg-dark text-light">dark</div>
+      <div class="col-md 3 st bg-primary text-light"> primary</div>
+      <div class="col-md 3 st bg-secondary text-light">secondary</div>
+    
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+    <br><br>
+
+  <div class="col-md 3 st bg  mt-5" >dark</div>
+  <div class="col-md 3 st bg-warning text-dark" > Success</div>
+  <div class="col-md 3 st bg-primary text-light"> primary</div>
+
+</body>
+
+
+</html>

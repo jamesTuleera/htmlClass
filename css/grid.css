@@ -1,0 +1,36 @@
+.mainBox{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.box{
+    /* height: 100px;
+    width: 100px; */
+    background-color: red;
+    font-size: 40px;
+    padding: 60px;
+    transition: 0.5s;
+}
+
+
+
+.box:hover{
+   
+    /* background-color: green; */
+    border-radius: 50px;
+    color: white;
+    transition: 0.5s;
+    background-color: black;
+    rotate: 25deg;
+  
+}
+
+
+.check{
+    margin: 200px;
+    height: 100px;
+    width: 100px;
+    background-color: saddlebrown;
+    rotate: 45deg;
+}

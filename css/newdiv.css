@@ -1,0 +1,29 @@
+.mainBox{
+ display: grid;
+ grid-template-columns: repeat(3,2fr);
+ gap: 40px;
+ padding: 50px;
+
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(126, 187, 215);
+    height: 300px;
+    width: 400px;
+    margin-top: 50px;
+}
+.minibox{
+    /* despplay: flex;
+    margin: 115px;
+    align-content: center; */
+    background-color: red;
+    height: 70px;
+    width: 70px;
+    rotate: 45deg;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
