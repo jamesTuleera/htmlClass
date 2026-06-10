@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>AJAX</title>
+</head>
+
+<body style="background-color: whitesmoke;">
+
+
+
+
+
+
+
+    <div class="container">
+            <button onclick="getData()" class="btn btn-primary mt-5 mb-5">Get Users</button>
+            <button onclick="getPost()" class="btn btn-danger mt-5 mb-5">Get Post</button>    
+        <div class="user row"></div>
+    </div>
+
+
+
+    <!-- json
+J = Javascript
+O = Object
+N = Notation -->
+
+
+    <!-- A = Asynchronious 
+    J = Javascript
+    A = And 
+    X = XML -->
+
+
+
+
+    <script>
+
+
+
+
+        function getData() {
+            let ajax = new XMLHttpRequest();
+            ajax.open('GET', 'https://jsonplaceholder.typicode.com/users')
+            ajax.send()
+
+            ajax.onload = () => {
+                let users = JSON.parse(ajax.responseText)
+                // console.log(users)
+
+                for (let i = 0; i < users.length; i++) {
+                    document.querySelector('.user').innerHTML +=
+                        `
+                            <div class="col-4 mt-5">
+                                <div class="card">
+                                    <div class="card-header bg-dark text-light">
+                                        <h5 class="card-title">${users[i].name}</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">${users[i].email}</p> <hr>
+                                        <p class="card-text">${users[i].phone}</p><hr>
+                                        <p class="card-text">${users[i].website}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            `
+                }
+            }
+        }
+
+
+
+
+        const getPost = () => {
+            const url = 'https://dummyjson.com/carts'
+            fetch(url)
+            .then(res => res.json())
+            .then(data => {
+
+
+                // console.log(data.carts[0].products.length)
+
+                let products = data.carts[0].products
+
+                // console.log(products)
+
+                for (let i = 0; i < products.length; i++) {
+                    document.querySelector('.user').innerHTML +=
+                        `
+                            <div class="col-4 mt-5">
+                                <div class="card">
+                                    
+                                     <div class="card-body">
+                                         <p class="card-text">${products[i].title}</p> <hr>
+                                         
+                                     </div>
+                                </div>
+                            </div>
+                            `
+                }
+            })  
+           
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

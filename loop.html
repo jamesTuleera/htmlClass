@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .cars {
+        background-color: whitesmoke;
+        width: 200px;
+        padding: 5px;
+        margin: 5px;
+        font-size: 20px;
+        transition: 0.5s;
+
+    }
+
+
+    .cars:hover {
+        background-color: white;
+        box-shadow: 1px 1px 1px gray;
+        width: 220px;
+        padding: 5px;
+        margin: 5px;
+        font-size: 20px;
+        transition: .5s;
+    }
+    
+</style>
+
+<body>
+
+
+    <div id="text"></div>
+
+    <script>
+
+        // for (let i = 0; i <= 90; i++) {
+
+        //     document.getElementById("text").innerHTML += "The number is " + i + "<br>"
+        // }
+
+
+        let i = 0;
+        // while (i <= 90) {
+        //     document.getElementById("text").innerHTML += "The number is " + i + "<br>"
+        //     i++
+
+        //     console.log(i)
+        // }
+        // text = "The number is ";
+        // do {
+        //     i++;
+        //     document.getElementById("text").innerHTML += `${text} ${i} <br>`
+        // }
+        // while (i < 10);
+
+
+        let cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi", "Toyota", 'Lamborghini'];
+        let len = cars.length;
+        // console.log(cars[len -1])
+
+        // let i = 0;
+
+        for (a = 0; a < len;) {
+            let displayDiv = document.getElementById("text")
+            displayDiv.innerHTML += `<div class="cars">${cars[a]}</div>`;
+            a++;
+        }
+
+
+    </script>
+</body>
+
+</html>

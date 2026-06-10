@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>Form Validation</title>
+</head>
+
+<body style="background-color: whitesmoke;">
+
+    <div class="container mt-5">
+        <div class="row mt-5">
+            <div class="col-4"></div>
+            <div class="col-4 " style="background-color: white; padding: 30px; margin-top: 120px;">
+                <form action="kjdasdljkfadf.html" id="formVal" onsubmit="formValidation()">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"> Name</label>
+                        <input id="formName" type="text" placeholder=" John Doe" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                        <small id="nameError"></small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input id="formEmail" type="text" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                        <small id="emailError"></small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Phone number</label>
+                        <input id="phone" type="text" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input id="password" type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Accept terms and condition</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function formValidation() {
+            event.preventDefault()
+
+            //Inputs
+            let name = document.getElementById('formName');
+            let email = document.getElementById('formEmail');
+            let phone = document.getElementById('phone');
+            let password = document.getElementById('password');
+
+            //Errors
+            let nameErr = document.getElementById('nameError')
+            let emailErr = document.getElementById('emailError')
+
+
+            let me = email.value
+            let rege = me.match(/@/)
+
+
+
+           if(name.value.match(/ /) == null){
+            name.style.border = '1px solid red'
+            nameErr.style.color = 'red'
+            nameErr.innerHTML = 'Your name must not contain space'
+            return
+           }
+
+
+
+            //Conditions for name
+            if (name.value.length <= 6) {
+                name.style.border = '1px solid red'
+                nameErr.style.color = 'red'
+                nameErr.innerHTML = 'Your name must not be less than 6 character'
+                return name.focus()
+            } else {
+                name.style.border = '1px solid green'
+                nameErr.style.color = 'green'
+                nameErr.innerHTML = 'valid'
+            }
+
+
+
+            if (rege == null) {
+                email.style.border = '1px solid red'
+                emailErr.style.color = 'red'
+                emailErr.innerHTML = '@ symbol most be included in your email'
+
+                return
+            }
+
+
+
+            if (email.value.length <= 6) {
+                email.style.border = '1px solid red'
+                emailErr.style.color = 'red'
+                emailErr.innerHTML = 'Please provide a valid email'
+
+                return email.focus()
+
+
+            } else {
+                email.style.border = '1px solid green'
+                emailErr.style.color = 'green'
+                emailErr.innerHTML = 'valid'
+            }
+
+
+
+            // document.getElementById('formVal').submit()
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+        
+
+
+    </script>
+
+
+</body>
+
+</html>

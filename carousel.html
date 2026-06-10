@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+
+<style>
+    .controls {
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+
+<body>
+
+
+
+    <section>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <img style="height: 400px;" src="images/1.png" alt="" class="img-fluid">
+                <!-- <img style="height: 400px;" src="images/4.png" alt="44444" class="img-flid"> -->
+            </div>
+        </div>
+
+
+        <div class="controls">
+            <button onclick="prevSlide()">
+                << </button>
+                    <button onclick="nextSlide()">>></button>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <script>
+
+
+
+        let slides = [
+                        '1.png',
+                        '2.png',
+                        '3.png',
+                        'girl.png',
+                        'WhatsApp Image 2025-05-12 at 08.43.29.jpeg',
+                        'home-4-hero-image.png',
+                        '100-1000096_nature-wallpaper-4k-hd.jpeg',
+                        'venom-2020-4k-1w.jpeg'
+                        // 'https://aimg.kwcdn.com/material-put/21137b28c4c/04f141ed-688d-4dba-a913-38b7e6828516.jpeg'
+                    ]
+                    
+        let counter = 0
+        let totalImages = slides.length -1
+
+        // let images = ['images/1.png', 'images/2.png', 'images/3.png', 'images/4.png']
+
+
+        // let counter = 0
+        function nextSlide() {
+            if (counter == slides.length -1) {
+                counter = 0
+            }
+            counter++
+            let images = document.querySelector('.img-fluid').src = 'images/' + slides[counter]
+            console.log(counter)
+        }
+        // function prevSlide() {
+
+        //     if (counter <= 1) {
+        //         counter = 4
+        //     }
+        //     counter--
+        //     let images = document.querySelector('.img-fluid').src = 'images/' + counter + '.png'
+        //     console.log(counter)
+
+        // }
+        // setInterval(() => {
+        //     if (counter == totalImages + 1) {
+        //         counter = 0
+        //     }
+        //     let images = document.querySelector('.img-fluid').src = 'images/' + slides[counter++]
+        // }, 500);
+    </script>
+
+</body>
+
+</html>
