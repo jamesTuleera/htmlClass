@@ -18,7 +18,7 @@
 
     <div class="container">
             <button onclick="getData()" class="btn btn-primary mt-5 mb-5">Get Users</button>
-            <button onclick="getPost()" class="btn btn-danger mt-5 mb-5">Get Post</button>    
+            <button onclick="getPost()" class="btn btn-danger mt-5 mb-5">Get Cart</button>    
         <div class="user row"></div>
     </div>
 
@@ -80,8 +80,6 @@ N = Notation -->
             fetch(url)
             .then(res => res.json())
             .then(data => {
-
-
                 // console.log(data.carts[0].products.length)
 
                 let products = data.carts[0].products
@@ -89,14 +87,13 @@ N = Notation -->
                 // console.log(products)
 
                 for (let i = 0; i < products.length; i++) {
-                    document.querySelector('.user').innerHTML +=
-                        `
+                    document.querySelector('.user').innerHTML += `
                             <div class="col-4 mt-5">
                                 <div class="card">
-                                    
                                      <div class="card-body">
-                                         <p class="card-text">${products[i].title}</p> <hr>
-                                         
+                                         <img src="${products[i].thumbnail}" alt="" class="img-fluid">
+                                        <p class="card-text"><b>${products[i].title}</b></p> 
+                                         <p class="card-text">N${products[i].price}</p>
                                      </div>
                                 </div>
                             </div>
